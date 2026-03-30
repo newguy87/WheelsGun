@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CBR 600RR</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a href="home.html" class="logo">
+      <img src="images-moto/logo.png" alt="Back to home" />
+    </a>
+
+    <div class="content">
+      <h1>Honda CBR 600RR</h1>
+
+      <img src="images-moto/cbr600rr.jpg" alt="Honda CBR 600RR" width="400" />
+
+      <p>
+        The Honda CBR600RR is a lightweight supersport motorcycle designed for
+        both track riding and street performance. It is known for its excellent
+        handling and smooth engine. Many riders love the CBR600RR because it is
+        fast but also easier to control than larger superbikes.
+      </p>
+    </div>
+
+    <ul>
+      <li>Engine: 599cc</li>
+      <li>Top Speed: 257km/h</li>
+      <li>Horsepower: 113hp</li>
+      <li>Type: Supersport</li>
+      <li>Manufacturer: Honda</li>
+    </ul>
+
+    <p>Here are some more photos:</p>
+
+    <div class="gallery">
+      <img
+        src="images-moto/cbr600/photo1.jpg"
+        alt="Bike 1"
+        class="gallery-cbr-img"
+      />
+      <img
+        src="images-moto/cbr600/photo2.jpg"
+        alt="Bike 2"
+        class="gallery-cbr-img"
+      />
+      <img
+        src="images-moto/cbr600/photo3.jpg"
+        alt="Bike 3"
+        class="gallery-cbr-img"
+      />
+      <img
+        src="images-moto/cbr600/photo4.jpg"
+        alt="Bike 4"
+        class="gallery-cbr-img"
+      />
+      <img
+        src="images-moto/cbr600/photo5.jpg"
+        alt="Bike 5"
+        class="gallery-cbr-img"
+      />
+      <img
+        src="images-moto/cbr600/photo6.jpg"
+        alt="Bike 6"
+        class="gallery-cbr-img"
+      />
+    </div>
+
+    <div id="lightbox">
+      <span id="close">&times;</span>
+      <img id="lightbox-img" src="" alt="close up" />
+    </div>
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.getElementById("close");
+      const galleryImages = document.querySelectorAll(".gallery-cbr-img");
+
+      galleryImages.forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex"; // show lightbox
+          lightboxImg.src = img.src; // set the clicked image
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none"; // hide lightbox
+      });
+    </script>
+  </body>
+</html>
